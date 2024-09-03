@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int diferenca(int a, int b, int c, int a2, int b2, int c2){
+  int d = ((a2 - a) * 3600) + ((b2 - b) * 60) + (c2 - c);
+  if (d > 0){
+    return d;
+  } else{
+    return -1;
+  }
+}
+
+int main(){
+  int a, b, c, a2, b2, c2;
+  printf("Digite dois horário em Horas, Minutos e Segundos\n");
+  scanf("%d %d %d %d %d %d", &a, &b, &c, &a2, &b2, &c2);
+
+  int dif = diferenca(a, b, c, a2, b2, c2);
+  printf("%d", dif);
+  return 0;
+}
