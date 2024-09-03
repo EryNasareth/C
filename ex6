@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int separaParteReal(double numero, int *parteInteira, double *parteFracionaria) { 
+  *parteInteira = (int)numero;  
+  *parteFracionaria = numero - *parteInteira;
+}
+
+int main() {
+  double numero;
+  int parteInteira;
+  double parteFracionaria;
+
+  printf("Digite um número real: ");
+  scanf("%lf", &numero);
+
+  separaParteReal(numero, &parteInteira, &parteFracionaria);
+
+  printf("Parte inteira: %d\n", parteInteira);
+  printf("Parte fracionária: %.2f\n", parteFracionaria);
+
+  return 0;
+}
