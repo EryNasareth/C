@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int media(int n1, int n2, int n3, char opcao){
+  if (opcao == 'A'){
+    return ((n1 + n2 + n3)/3);
+  } if (opcao == 'P'){
+    return ((n1*5) + (n2*3) + (n3*2))/10;
+  }
+}
+
+int main(){
+  int n1, n2, n3;
+  printf("digite 3 notas ");
+  scanf("%d %d %d", &n1, &n2, &n3);
+  char opcao; 
+  printf("digite A ou P ");
+  scanf(" %c", &opcao);
+  int resultado = media(n1, n2, n3, opcao);
+  printf("resultado: %d", resultado);
+}
